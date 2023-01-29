@@ -1,0 +1,24 @@
+ {/* <div>
+		 	className="seekbar-container"
+	 	onClick={handleSeekBarClick}
+		 >
+		<div
+				className="seekbar"
+				id="seekbar"
+				style={{
+					width: `${
+						videoRef.current
+							? (currentTime / videoRef.current.duration) * 100
+							: 0
+					}%`,
+				}}
+			></div>
+		</div> */}
+
+
+        {/* <div className="seekbar-container">
+				<div
+					className="seekbar"
+					id="seekbar"
+				></div>
+			</div> */}

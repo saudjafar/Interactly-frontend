@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import "./components/form.css";
+import React from "react";
+import { useState, useEffect } from "react";
+import Main from "./components/Main";
+import Oac from "./components/Oac";
+import Ob from "./components/Ob";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [displayedComponent, setDisplayedComponent] = useState("main");
+
+	useEffect(() => {
+		setDisplayedComponent("main");
+	}, []);
+
+	const handleOacButtonClick = () => {
+		setDisplayedComponent("oac");
+	};
+
+	const handleObButtonClick = () => {
+		setDisplayedComponent("ob");
+	};
+	return (
+		<div>
+			{displayedComponent === "main" && (
+				<Main
+					handleOacButtonClick={handleOacButtonClick}
+					handleObButtonClick={handleObButtonClick}
+				/>
+			)}
+			{displayedComponent === "oac" && <Oac />}
+			{displayedComponent === "ob" && <Ob />}
+		</div>
+	);
 }
 
 export default App;

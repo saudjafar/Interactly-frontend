@@ -1,0 +1,41 @@
+/*-----------------------Overlay-----------------------------------------*/
+video::-webkit-media-controls {
+	display: none;
+}
+.container-class {
+	width: 100%;
+}
+.custom-controls {
+	position: absolute;
+	z-index: 50;
+}
+.video-class {
+	z-index: 0;
+}
+
+.overlay-div {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.3;
+	z-index: 2;
+	transition: opacity 0.25s ease-in-out;
+	cursor: pointer;
+}
+
+.welcome-text {
+	position: absolute;
+	font-family: sans-serif;
+	font-weight: bold;
+	color: white;
+	z-index: 2;
+	font-size: 2.8vw;
+	left: 50px;
+	top: 100px;
+	transition: opacity 0.25s ease-in-out;
+}
+
+.hide {
+	opacity: 0;
+}

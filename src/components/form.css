@@ -1,0 +1,155 @@
+.left-half {
+	width: 50%;
+	height: 100vh;
+	display: flex;
+}
+
+.right-half {
+	width: 50%;
+	height: 100vh;
+	display: flex;
+}
+
+@media (min-width: 1025px) {
+	.form-class {
+		padding: 15vh 80px;
+	}
+}
+.form-class {
+	display: block;
+	width: 100%;
+	padding-left: 80px;
+	padding-right: 80px;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 102px;
+}
+
+.checkbox {
+	width: 22px;
+	height: 22px;
+	cursor: pointer;
+}
+
+input[type="checkbox"] {
+	appearance: none;
+	width: 22px;
+	height: 22px;
+	border: 2px solid black;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+input[type="checkbox"]:checked {
+	background-color: white;
+}
+input[type="checkbox"]:checked::before {
+	content: "✔";
+	font-size: 1.3em;
+	font-weight: bold;
+	color: black;
+}
+.form-consent-wrapper {
+	display: flex;
+	flex-direction: row;
+	margin: 16px 0px 32px;
+	-webkit-font-smoothing: antialiased;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	box-sizing: border-box;
+	color: gray;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.consent-form-text {
+	color: rgba(17, 17, 17, 0.6);
+	font-size: 14px;
+	line-height: 130%;
+	margin-left: 8px;
+	max-height: 30vh;
+	overflow-y: auto;
+}
+.introText {
+	color: rgb(17, 17, 17);
+	font-size: 20px;
+	font-weight: 500;
+	letter-spacing: 0.3px;
+	line-height: 140%;
+	margin-bottom: 24px;
+}
+.input-label {
+	display: inline;
+}
+.textbox-input {
+	appearance: none;
+	background: transparent;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	border-image: initial;
+	border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+	border-radius: 0px;
+	color: black;
+	font-size: 20px;
+	line-height: 22px;
+	margin-bottom: 24px;
+	outline: none;
+	padding: 12px 0px;
+	width: 100%;
+}
+.textbox-input:focus {
+	border-bottom: 2px solid rgba(17, 17, 17);
+}
+
+::placeholder {
+	color: rgb(211, 211, 211);
+}
+.button {
+	-webkit-box-align: center;
+	align-items: center;
+	border: none;
+	background: rgb(125, 0, 254);
+	color: rgb(255, 255, 255);
+	box-shadow: rgb(0 0 0 / 10%) 0px 10px 30px 0px;
+	border-radius: 16px;
+	cursor: pointer;
+	display: flex;
+	flex-shrink: 0;
+	font-size: 18px;
+	font-weight: 700;
+	height: 68px;
+	-webkit-box-pack: center;
+	justify-content: center;
+	line-height: 22px;
+	opacity: 1;
+	padding: 16px 32px;
+	transition: all 0.15s ease-in-out 0s;
+	width: 100%;
+}
+button:hover {
+	transform: scale(1.02);
+	background: rgb(125, 0, 254);
+	color: white;
+	cursor: pointer;
+}
+
+.form-class-fade-enter {
+	opacity: 0;
+}
+
+.form-class-fade-enter-active {
+	opacity: 1;
+	transition: opacity 500ms;
+}
+
+.form-class-fade-exit {
+	opacity: 1;
+}
+
+.form-class-fade-exit-active {
+	opacity: 0;
+	transition: opacity 500ms;
+}
